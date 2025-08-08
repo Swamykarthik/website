@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const HeroSection = () => {
@@ -9,32 +9,22 @@ const HeroSection = () => {
     {
       id: 1,
       image: "https://res.cloudinary.com/dqebzntfm/image/upload/v1754560483/web_1_1_tdxpfc.jpg",
-      title: "Our Premium Store",
-      description: "Wide collection of quality fireworks"
     },
     {
       id: 2,
       image: "https://res.cloudinary.com/dqebzntfm/image/upload/v1754559691/web_2_buuga6.jpg",
-      title: "Manufacturing Excellence",
-      description: "State-of-the-art production facility"
     },
     {
       id: 3,
-      image: "https://images.pexels.com/photos/1729808/pexels-photo-1729808.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      title: "Grand Celebrations",
-      description: "Creating magical moments since 1932"
+      image: "https://res.cloudinary.com/dqebzntfm/image/upload/v1754663024/bfb985c7-b8a6-4fb0-b187-fa8024addba6_goqs9h.jpg",
     },
     {
       id: 4,
-      image: "https://images.pexels.com/photos/1303081/pexels-photo-1303081.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      title: "Safety First",
-      description: "Certified and tested products"
+      image: "https://res.cloudinary.com/dqebzntfm/image/upload/v1754663216/f56e3ec2-3eb5-4bab-9035-38ffa5aa4674_rd6yb4.jpg",
     },
     {
       id: 5,
-      image: "https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      title: "Customer Satisfaction",
-      description: "90+ years of trusted service"
+      image: "https://res.cloudinary.com/dqebzntfm/image/upload/v1754662982/9ac11d0b-8484-4438-b5b2-04305f1ea6f8_kinyji.jpg",
     }
   ];
 
@@ -74,15 +64,56 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
 
+          {/* Hero text */}
+          <div className="space-y-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
+              <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
+                Sri Ganapathi
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Grand Fireworks
+              </span>
+            </h1>
+
+            <div className="flex items-center justify-center space-x-4">
+              <Sparkles className="h-8 w-8 text-yellow-400 animate-pulse" />
+              <p className="text-xl md:text-2xl text-white/90 font-medium">
+                A Tradition of Grand Celebrations Since 1932
+              </p>
+              <Sparkles className="h-8 w-8 text-yellow-400 animate-pulse" />
+            </div>
+
+            <p className="text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
+              For over 90 years, we've been lighting up celebrations across the region with our premium quality fireworks. 
+              From intimate birthday parties to grand weddings, we make every moment sparkle with joy.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={handleExploreProducts}
+                className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-red-500 text-black font-bold rounded-full hover:from-yellow-300 hover:to-red-400 transform hover:scale-105 transition-all duration-300 shadow-lg"
+              >
+                Explore Products
+              </button>
+              <button
+                onClick={handleWhatsAppContact}
+                className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-full hover:bg-white/10 hover:border-white/60 transition-all duration-300"
+              >
+                Contact Us
+              </button>
+            </div>
+          </div>
+
           {/* Photo Slideshow */}
           <div className="relative max-w-4xl mx-auto">
-            <div className="aspect-video bg-black/40 rounded-2xl border-2 border-yellow-400/30 backdrop-blur-sm overflow-hidden group">
+            <div className="aspect-[4/3] sm:aspect-video bg-black rounded-2xl border-2 border-yellow-400/30 backdrop-blur-sm overflow-hidden group">
               <div className="relative h-full">
                 {/* Main Image */}
                 <img
                   src={slides[currentSlide].image}
                   alt={slides[currentSlide].title}
-                  className="w-full h-full object-cover transition-all duration-500"
+                  className="w-full h-full object-contain object-center transition-all duration-500 bg-black"
                 />
                 
                 {/* Overlay */}
@@ -132,47 +163,6 @@ const HeroSection = () => {
                   {currentSlide + 1} / {slides.length}
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Hero text */}
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
-              <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
-                Sri Ganapathi
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Grand Fireworks
-              </span>
-            </h1>
-
-            <div className="flex items-center justify-center space-x-4">
-              <Sparkles className="h-8 w-8 text-yellow-400 animate-pulse" />
-              <p className="text-xl md:text-2xl text-white/90 font-medium">
-                A Tradition of Grand Celebrations Since 1932
-              </p>
-              <Sparkles className="h-8 w-8 text-yellow-400 animate-pulse" />
-            </div>
-
-            <p className="text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
-              For over 90 years, we've been lighting up celebrations across the region with our premium quality fireworks. 
-              From intimate birthday parties to grand weddings, we make every moment sparkle with joy.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={handleExploreProducts}
-                className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-red-500 text-black font-bold rounded-full hover:from-yellow-300 hover:to-red-400 transform hover:scale-105 transition-all duration-300 shadow-lg"
-              >
-                Explore Products
-              </button>
-              <button
-                onClick={handleWhatsAppContact}
-                className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-full hover:bg-white/10 hover:border-white/60 transition-all duration-300"
-              >
-                Contact Us
-              </button>
             </div>
           </div>
         </div>

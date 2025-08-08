@@ -1,5 +1,4 @@
-import React from 'react';
-import { Quote } from 'lucide-react';
+ 
 
 const OwnerSection = () => {
   const owners = [
@@ -7,13 +6,15 @@ const OwnerSection = () => {
       name: "V. Satyanarayana Murthy",
       role: "Founder",
       quote: "Every firework we create carries the joy of celebration and the warmth of tradition.",
-      image: "/mnt/data/tata.jpg"
+      image: '/tata.jpg',
+      imageClass: 'scale-110 object-[50%_30%]'
     },
     {
       name: "V. Chitti Babu",
       role: "Co-Founder / Owner",
       quote: "We don't just sell fireworks; we craft memories that light up hearts forever.",
-      image: "/mnt/data/chitti.jpg"
+      image: '/chi.jpg',
+      imageClass: 'scale-110 object-[50%_45%]'
     }
   ];
 
@@ -32,14 +33,15 @@ const OwnerSection = () => {
             <div key={index} className="group">
               <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="text-center space-y-6">
-                  <div className="relative inline-block">
-                    <img
-                      src={owner.image}
-                      alt={owner.name}
-                      className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-gradient-to-r from-yellow-400 to-red-500 p-1"
-                    />
-                    <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-red-500 rounded-full flex items-center justify-center">
-                      <Quote className="h-6 w-6 text-black" />
+                  <div className="flex justify-center">
+                    <div className="w-32 h-32 rounded-full p-[3px] bg-gradient-to-r from-yellow-400 to-red-500">
+                      <div className="w-full h-full rounded-full overflow-hidden bg-black/20">
+                        <img
+                          src={owner.image}
+                          alt={owner.name}
+                          className={`w-full h-full object-cover ${owner.imageClass ?? ''}`}
+                        />
+                      </div>
                     </div>
                   </div>
                   

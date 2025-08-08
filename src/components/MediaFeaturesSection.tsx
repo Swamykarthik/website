@@ -8,7 +8,7 @@ const MediaFeaturesSection = () => {
       channel: "ABN",
       title: "Lighting Up Traditions: The Story of Sri Ganapathi Fireworks",
       description: "A comprehensive documentary showcasing our 90-year journey and traditional firework manufacturing processes.",
-      image: "https://images.pexels.com/photos/1303081/pexels-photo-1303081.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: "https://res.cloudinary.com/dqebzntfm/image/upload/v1754663016/9163fdf4-55f3-4498-89e3-d48d2c191c35_n0bcnu.jpg",
       type: "Documentary",
       icon: Tv
     },
@@ -17,7 +17,7 @@ const MediaFeaturesSection = () => {
       channel: "Andhra Prabha",
       title: "90 Years of Illuminating Celebrations",
       description: "Feature article highlighting our legacy and contribution to the fireworks industry in Andhra Pradesh.",
-      image: "https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: "https://res.cloudinary.com/dqebzntfm/image/upload/v1754663011/cfd9b1b9-65ab-4a2d-9038-78529e4aa2b8_pnywa7.jpg",
       type: "Newspaper",
       icon: Newspaper
     },
@@ -26,7 +26,7 @@ const MediaFeaturesSection = () => {
       channel: "TV9 Documentary",
       title: "Masters of the Sky: India's Firework Legacy",
       description: "Special documentary featuring our manufacturing unit and the art of creating spectacular firework displays.",
-      image: "https://images.pexels.com/photos/1729808/pexels-photo-1729808.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: "https://res.cloudinary.com/dqebzntfm/image/upload/v1754662996/16e0d2af-5108-4470-b404-c8c04bb45d65_hgxwxh.jpg",
       type: "TV Feature",
       icon: Tv
     },
@@ -35,7 +35,7 @@ const MediaFeaturesSection = () => {
       channel: "Suman TV",
       title: "How One Family Revolutionized India's Firework Industry",
       description: "An inspiring story about our family business and its impact on the Indian fireworks industry.",
-      image: "https://images.pexels.com/photos/1303081/pexels-photo-1303081.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: "https://res.cloudinary.com/dqebzntfm/image/upload/v1754663002/74cf0625-f394-416d-a5d2-dd4a099ca864_drq4i3.jpg",
       type: "Interview",
       icon: Radio
     }
@@ -95,14 +95,6 @@ const MediaFeaturesSection = () => {
                     <p className="text-white/70 leading-relaxed">
                       {feature.description}
                     </p>
-                    
-                    <div className="flex items-center justify-between pt-4">
-                      <button className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 font-semibold transition-colors">
-                        <Play className="h-4 w-4" />
-                        <span>Watch Feature</span>
-                      </button>
-                      <span className="text-white/50 text-sm">Featured Story</span>
-                    </div>
                   </div>
                 </div>
               </div>
